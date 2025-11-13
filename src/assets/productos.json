@@ -1,0 +1,10 @@
+[
+  { "id": 1, "nombre": "PLC Siemens S7", "codigo": "6ES7-214-1AG40-0XB0", "categoria": "PLCs", "descripcion": "Controlador lógico programable.", "precio": 1200, "imagen": "assets/productos/PLCS.jpg" },
+  { "id": 2, "nombre": "HMI PanelView 7", "codigo": "2711P-T7C4D9", "categoria": "HMIs", "descripcion": "Interfaz hombre-máquina táctil.", "precio": 850, "imagen": "assets/productos/HMIS.jpg" },
+  { "id": 3, "nombre": "Variador ABB ACS355", "codigo": "ACS355-01E-07A5-2", "categoria": "Drives", "descripcion": "Variador de frecuencia compacto.", "precio": 950, "imagen": "assets/productos/variador.jpg" },
+  { "id": 4, "nombre": "Multímetro Fluke 117", "codigo": "FLUKE-117", "categoria": "Herramientas", "descripcion": "Multímetro digital.", "precio": 399, "imagen": "assets/productos/multimetro.png" },
+  { "id": 5, "nombre": "Contactores Schneider", "codigo": "LC1D09M7", "categoria": "Eléctrico", "descripcion": "Contactores para motores.", "precio": 369, "imagen": "assets/productos/contactorsnider.jpg" },
+  { "id": 6, "nombre": "Pack Herramientas Milwaukee", "codigo": "M18FPP2A-523P", "categoria": "Herramientas", "descripcion": "Kit de taladro y atornillador.", "precio": 1799, "imagen": "assets/productos/pack.jpg" },
+  { "id": 7, "nombre": "Sensor Proximidad Omron", "codigo": "E2E-X5ME1", "categoria": "Eléctrico", "descripcion": "Sensor inductivo M12.", "precio": 99.99, "imagen": "assets/productos/sensor.jpg" },
+  { "id": 8, "nombre": "Switch Industrial CMR2040", "codigo": "6GK7142-7EX00-0AX0", "categoria": "Eléctrico", "descripcion": "Switch administrable industrial.", "precio": 398, "imagen": "assets/productos/switchindustrial.jpg" } 
+]

@@ -1,0 +1,101 @@
+<!-- <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/">AutCore</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <li class="nav-item"><a class="nav-link" routerLink="/">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/productos">Productos</a></li>
+        <li class="nav-item">
+          <a class="btn btn-primary position-relative" routerLink="/carrito">
+            <i class="bi bi-cart3"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{count}}
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <div class="form-check form-switch ms-lg-3">
+            <input class="form-check-input" type="checkbox" id="themeSwitch" (change)="toggleTheme($event)">
+            <label class="form-check-label" for="themeSwitch">
+              <i class="bi bi-moon"></i>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ -->
+
+
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 border-bottom sticky-top">
+  <div class="container align-items-center">
+
+    <!-- LOGO -->
+    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
+      <img src="assets/Logo.png" alt="logo" class="logo-img">
+    
+    </a>
+
+    <!-- BUSCADOR -->
+    <div class="search-box d-none d-lg-flex align-items-center ms-4">
+      <i class="bi bi-search search-icon"></i>
+      <input type="text" class="form-control search-input" placeholder="Buscar">
+    </div>
+
+    <!-- HAMBURGUESA -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- MENÚ -->
+    <div class="collapse navbar-collapse justify-content-center" id="menu">
+      <ul class="navbar-nav gap-lg-4 mt-3 mt-lg-0">
+
+       <!--  <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+        </li> -->
+
+        <li class="nav-item"><a class="nav-link" routerLink="/">Inicio</a></li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/productos" routerLinkActive="active">Productos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/servicios" routerLinkActive="active">Servicios</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- ICONOS DERECHA -->
+    <div class="icons d-flex align-items-center gap-4 ms-4">
+      <i class="bi bi-heart"></i>
+      
+      <li class="nav-item">
+          <a class="btn btn-primary position-relative" routerLink="/carrito">
+            <i class="bi bi-cart3"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{count}}
+            </span>
+          </a>
+        </li>
+
+
+      <i class="bi bi-person"></i>
+    </div>
+
+  </div>
+</nav>

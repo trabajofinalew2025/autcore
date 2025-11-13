@@ -1,0 +1,53 @@
+<section class="py-4">
+  <div class="container">
+    <div class="row g-4">
+      <aside class="col-12 col-lg-3">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Buscar por texto</h5>
+            <div class="input-group">
+              <input class="form-control"
+                     [(ngModel)]="term"
+                     (input)="buscar()"
+                     placeholder="Nombre o código">
+              <button class="btn btn-outline-secondary" (click)="term=''; buscar()">
+                <i class="bi bi-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Categoría</h5>
+            <div class="list-group">
+              <button *ngFor="let c of categorias"
+                      class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                      [class.active]="c === seleccion"
+                      (click)="filtrar(c)">
+                {{c}}
+                <i class="bi" [ngClass]="{'bi-check2': c === seleccion}"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="col-12 col-lg-9">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+          <ng-container *ngIf="productos$ | async as productos; else loading">
+            <div class="col" *ngFor="let p of productos">
+              <app-product-card [product]="p"></app-product-card>
+            </div>
+            <div *ngIf="productos.length === 0" class="text-center text-muted py-5">
+              No hay productos en esta selección.
+            </div>
+          </ng-container>
+          <ng-template #loading>
+            <div class="text-center text-muted py-5">Cargando...</div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

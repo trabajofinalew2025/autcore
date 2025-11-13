@@ -1,0 +1,78 @@
+/* LOGO */
+.logo-img {
+  width: 160px;
+}
+
+.logo-text {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.logo-aut {
+  color: #444;
+}
+
+.logo-core {
+  color: #0d6efd;
+}
+
+/* NAV LINKS */
+.nav-link {
+  color: #8a8a8a;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.nav-link.active {
+  color: #000;
+  font-weight: 600;
+  border-bottom: 2px solid #0d6efd;
+  padding-bottom: 3px;
+}
+
+/* BUSCADOR */
+.search-box {
+  background: #f3f3f3;
+  border-radius: 40px;
+  padding: 8px 16px;
+  width: 300px;
+}
+
+.search-icon {
+  font-size: 1.2rem;
+  color: #666;
+  margin-right: 8px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+/* ICONOS */
+.icons i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.icons i:hover {
+  color: #0d6efd;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+  .search-box {
+    display: none; /* Se oculta en móvil como el PDF */
+  }
+}

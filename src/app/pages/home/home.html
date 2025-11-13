@@ -1,0 +1,522 @@
+<!-- <section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-lg-6">
+        <h1 class="display-5 fw-bold">Catálogo Industrial AutCore</h1>
+        <p class="lead">Filtra por categoría, agrega productos al carrito y simula una compra.</p>
+        <a routerLink="/productos" class="btn btn-primary btn-lg">Ver productos</a>
+      </div>
+      <div class="col-12 col-lg-6 text-center">
+        <img class="img-fluid rounded shadow-sm"
+             src="https://placehold.co/800x480?text=AutCore+Industrial"
+             alt="AutCore Hero">
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- =======================
+     CARRUSEL FULL-WIDTH
+======================== -->
+<div id="autcoreCarousel" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- INDICADORES -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#autcoreCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#autcoreCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#autcoreCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- SLIDES -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="assets/slides/slide1.jpg" class="d-block w-100 slide-banner" alt="AutCore Banner">
+      <div class="carousel-caption d-none d-md-block">
+    <!--     <h2 class="banner-title">Automatización Industrial de Alto Nivel</h2>
+        <p class="banner-text">PLCs, HMIs, Drives y más tecnología para tu industria.</p> -->
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/slides/slide2.jpg" class="d-block w-100 slide-banner" alt="Equipos Industriales">
+      <div class="carousel-caption d-none d-md-block">
+     <!--    <h2 class="banner-title">Equipos Profesionales</h2>
+        <p class="banner-text">Calidad Premium para proyectos exigentes.</p> -->
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/slides/slide3.jpg" class="d-block w-100 slide-banner" alt="Tecnología">
+      <div class="carousel-caption d-none d-md-block">
+    <!--     <h2 class="banner-title">Control y Monitoreo</h2>
+        <p class="banner-text">Soluciones eficientes y confiables.</p> -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTROLES -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#autcoreCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#autcoreCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+
+
+
+
+<!-- =======================
+     CATEGORÍAS PRINCIPALES
+======================== -->
+<section class="categories-slider container my-5">
+
+  <h3 class="fw-semibold mb-4">Buscar por categoría</h3>
+
+  <div class="slider-container">
+
+    <!-- Flecha izquierda -->
+    <button class="nav-btn left" (click)="scrollLeft()">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <!-- Contenedor deslizable -->
+    <div class="categories-scroll" #scrollArea>
+
+      <div class="category-item" routerLink="/productos" [queryParams]="{ cat: 'PLCs' }">
+        <div class="icon-box"><i class="bi bi-phone"></i></div>
+        <span>PLCS</span>
+      </div>
+
+      <div class="category-item" routerLink="/productos" [queryParams]="{ cat: 'HMIs' }">
+        <div class="icon-box"><i class="bi bi-smartwatch"></i></div>
+        <span>HMIS</span>
+      </div>
+
+      <div class="category-item" routerLink="/productos" [queryParams]="{ cat: 'Drives' }">
+        <div class="icon-box"><i class="bi bi-camera"></i></div>
+        <span>DRIVES</span>
+      </div>
+
+      <div class="category-item" routerLink="/productos" [queryParams]="{ cat: 'Eléctrico' }">
+        <div class="icon-box"><i class="bi bi-headphones"></i></div>
+        <span>ELÉCTRICO</span>
+      </div>
+
+      <div class="category-item" routerLink="/productos" [queryParams]="{ cat: 'Herramientas' }">
+        <div class="icon-box"><i class="bi bi-display"></i></div>
+        <span>HERRAMIENTAS</span>
+      </div>
+
+      <div class="category-item" routerLink="/productos" [queryParams]="{ cat: 'Ofertas' }">
+        <div class="icon-box"><i class="bi bi-controller"></i></div>
+        <span>OFERTAS</span>
+      </div>
+
+    </div>
+
+    <!-- Flecha derecha -->
+    <button class="nav-btn right" (click)="scrollRight()">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =======================
+      SECCIÓN HERO
+======================== -->
+<!-- <section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-12 col-lg-6">
+        <h1 class="display-5 fw-bold">Catálogo Industrial AutCore</h1>
+        <p class="lead">Filtra por categoría, agrega productos al carrito y simula una compra.</p>
+        <a routerLink="/productos" class="btn btn-primary btn-lg">Ver productos</a>
+      </div>
+      <div class="col-12 col-lg-6 text-center">
+        <img class="img-fluid rounded shadow-sm"
+             src="https://placehold.co/800x480?text=AutCore+Industrial"
+             alt="AutCore Hero">
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+<!-- =======================
+     PRODUCTOS HOME
+======================== -->
+
+<section class="products-section container my-5">
+
+  <!-- TABS -->
+  <ul class="tabs">
+    <li [class.active]="activeTab === 'solicitados'" (click)="setTab('solicitados')">Productos más solicitados</li>
+    <li [class.active]="activeTab === 'destacados'" (click)="setTab('destacados')">Productos destacados</li>
+    <li [class.active]="activeTab === 'ofertas'" (click)="setTab('ofertas')">Ofertas</li>
+  </ul>
+
+  <!-- GRID -->
+  <div class="row g-4 mt-3">
+    <div class="col-12 col-sm-6 col-lg-4" *ngFor="let p of filteredProducts">
+
+      <div class="product-card">
+
+        <!-- FAVORITO -->
+        <i class="bi bi-heart fav-icon" (click)="toggleFav(p)"></i>
+
+        <!-- IMAGEN -->
+        <div class="img-box">
+          <img [src]="p.imagen" alt="{{ p.nombre }}">
+        </div>
+
+        <!-- NOMBRE -->
+        <h5 class="product-title">{{ p.nombre }}</h5>
+        
+        <!-- DETALLE -->
+        <p class="product-desc">{{ p.descripcion }}</p>
+
+        <!-- PRECIO -->
+        <h4 class="price">S/{{ p.precio }}</h4>
+
+        <!-- BOTÓN -->
+        <!-- <button class="btn-black">Buy Now</button> -->
+            <button class="btn btn-black w-100 mt-3" (click)="addToCart(p)">
+                <i class="bi bi-cart-plus"></i> Agregar al carrito
+                
+
+        </button>
+
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<!-- ======================================
+     SERVICIOS AUTCORE
+======================================= -->
+
+
+<section class="services-pdf-section py-5">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold">Servicios</h2>
+
+      <!-- Flechas opcionales -->
+      <div class="service-arrows">
+        <i class="bi bi-chevron-left"></i>
+        <i class="bi bi-chevron-right"></i>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- CARD 1 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card-pdf">
+          <img src="assets/servicios/s1.jpg" alt="">
+          <div class="content">
+            <h3>Diseño de<br>Armarios eléctricos</h3>
+            <p>
+              Fabricación profesional de tableros eléctricos y
+              soluciones de control a medida.
+            </p>
+            <button class="btn-solicitar">Solicitar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card-pdf">
+          <img src="assets/servicios/montaje.jpg" alt="">
+          <div class="content">
+            <h3>Montaje eléctrico<br>e instrumentación</h3>
+            <p>
+              Instalaciones industriales seguras, calibración y
+              conexionado profesional.
+            </p>
+            <button class="btn-solicitar">Solicitar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card-pdf">
+          <img src="assets/servicios/comunicaciones.jpg" alt="">
+          <div class="content">
+            <h3>Integración<br>de equipos</h3>
+            <p>
+              Integración de PLC, sensores, HMI y variadores en
+              sistemas de control modernos.
+            </p>
+            <button class="btn-solicitar">Solicitar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 (FONDO OSCURO) -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="service-card-pdf dark">
+          <img src="assets/servicios/ejecucion.jpg" alt="">
+          <div class="content">
+            <h3>Ejecución<br>y construcción</h3>
+            <p>
+              Proyectos integrales desde instalación hasta comisión
+              completa en campo.
+            </p>
+            <button class="btn-solicitar dark">Solicitar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======================================
+     BENEFICIOS / POR QUÉ ELEGIRNOS
+======================================= -->
+<section class="benefits-section py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">¿Por qué elegir AutCore?</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- ITEM -->
+      <div class="col-6 col-md-3">
+        <div class="benefit-card text-center">
+          <i class="bi bi-truck"></i>
+          <h5>Envíos a todo el país</h5>
+          <p>Entregamos en cualquier ciudad del Perú.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="benefit-card text-center">
+          <i class="bi bi-shield-check"></i>
+          <h5>Garantía oficial</h5>
+          <p>Equipos con respaldo de fábrica.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="benefit-card text-center">
+          <i class="bi bi-award"></i>
+          <h5>Productos originales</h5>
+          <p>Automatización y control industrial certificado.</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="benefit-card text-center">
+          <i class="bi bi-headset"></i>
+          <h5>Asesoría técnica</h5>
+          <p>Soporte especializado en PLC, HMI y Drives.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================
+     MARCAS CONFIABLES
+======================================= -->
+<section class="brands-section py-5 bg-light">
+  <div class="container">
+
+    <h2 class="text-center fw-bold mb-4">Marcas de Confianza</h2>
+    <p class="text-center mb-5 text-muted">Trabajamos con las mejores marcas del sector industrial</p>
+
+    <div class="row g-4 justify-content-center align-items-center">
+
+      <!-- LOGO 1 -->
+      <div class="col-6 col-md-3 col-lg-2 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Siemens-logo.svg/2560px-Siemens-logo.svg.png"
+             class="brand-logo" alt="Siemens">
+      </div>
+
+      <!-- LOGO 2 -->
+      <div class="col-6 col-md-3 col-lg-2 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/ABB_logo.svg/2560px-ABB_logo.svg.png"
+             class="brand-logo" alt="ABB">
+      </div>
+
+      <!-- LOGO 3 -->
+      <div class="col-6 col-md-3 col-lg-2 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Schneider_Electric_logo.svg/2560px-Schneider_Electric_logo.svg.png"
+             class="brand-logo" alt="Schneider Electric">
+      </div>
+
+      <!-- LOGO 4 -->
+      <div class="col-6 col-md-3 col-lg-2 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Omron_Logo.svg/2560px-Omron_Logo.svg.png"
+             class="brand-logo" alt="Omron">
+      </div>
+
+      <!-- LOGO 5 -->
+      <div class="col-6 col-md-3 col-lg-2 text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Rockwell_Automation_logo.svg/2560px-Rockwell_Automation_logo.svg.png"
+             class="brand-logo" alt="Rockwell Automation">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ======================================
+     TESTIMONIOS / CASOS DE ÉXITO
+======================================= -->
+<section class="testimonials-section py-5 bg-light">
+  <div class="container">
+
+    <h2 class="fw-bold text-center mb-4">Testimonios de Clientes</h2>
+    <p class="text-center text-muted mb-5">
+      Clientes que confiaron en AutCore para soluciones industriales profesionales
+    </p>
+
+    <div class="row g-4">
+
+      <!-- TESTIMONIO 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card p-4">
+          <div class="avatar bg-primary text-white">
+            J
+          </div>
+          <h5 class="name">Juan Morales</h5>
+          <span class="company">Planta Industrial Yura</span>
+
+          <p class="comment">
+            “Excelente soporte técnico y profesionalismo.
+            Automatizaron nuestro sistema sin interrupciones.”
+          </p>
+
+          <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIO 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card p-4">
+          <div class="avatar bg-danger text-white">
+            M
+          </div>
+          <h5 class="name">María Hurtado</h5>
+          <span class="company">Cementos Pacasmayo</span>
+
+          <p class="comment">
+            “Gran conocimiento en PLCs Siemens y ABB.
+            El equipo de AutCore resolvió fallas críticas en tiempo récord.”
+          </p>
+
+          <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIO 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="testimonial-card p-4">
+          <div class="avatar bg-dark text-white">
+            R
+          </div>
+          <h5 class="name">Ricardo Salas</h5>
+          <span class="company">Minera Las Bambas</span>
+
+          <p class="comment">
+            “Implementación impecable. El sistema de control quedó moderno
+            y con una documentación completa.”
+          </p>
+
+          <div class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ======================================
+     CALL TO ACTION GRANDE
+======================================= -->
+<section class="cta-section py-5">
+  <div class="container text-center">
+
+    <h2 class="fw-bold mb-3 text-white">¿Necesitas una solución industrial?</h2>
+    <p class="text-white mb-4">
+      Nuestro equipo técnico está listo para ayudarte con automatización, control y proyectos eléctricos.
+    </p>
+
+    <button class="cta-btn">
+      Solicitar una cotización
+    </button>
+
+  </div>
+</section>
+
+

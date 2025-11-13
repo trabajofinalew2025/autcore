@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --radius: 14px;
+  --bg: #ffffff;
+  --fg: #212529;
+  --card: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --fg: #f1f3f5;
+  --card: #1e1e1e;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.card, .form-control, .navbar, footer {
+  background: var(--card);
+}
+
+.btn, .card, .form-control {
+  border-radius: var(--radius);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.py-6 {
+  padding-block: 5rem;
+}
+
+.list-group-item.active {
+  background: #0d6efd;
+  border-color: #0d6efd;
+}

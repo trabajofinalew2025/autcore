@@ -1,0 +1,72 @@
+<section class="py-4">
+  <div class="container">
+    <h2 class="mb-4">Tu carrito</h2>
+
+    <div *ngIf="items.length === 0" class="alert alert-info">
+      No tienes productos en el carrito.
+      <a routerLink="/productos">Ver productos</a>
+    </div>
+
+    <div class="table-responsive" *ngIf="items.length > 0">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th class="text-center">Cantidad</th>
+            <th class="text-end">Precio</th>
+            <th class="text-end">Subtotal</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of items">
+            <td>
+              <div class="d-flex align-items-center gap-3">
+                <img *ngIf="i.product.imagen"
+                     [src]="i.product.imagen"
+                     width="60"
+                     height="40"
+                     class="rounded object-fit-cover" />
+                <div>
+                  <div class="fw-semibold">{{i.product.nombre}}</div>
+                  <div class="small text-muted">{{i.product.codigo}}</div>
+                </div>
+              </div>
+            </td>
+            <td class="text-center">
+              <div class="input-group input-group-sm justify-content-center" style="max-width: 140px; margin:auto;">
+                <button class="btn btn-outline-secondary" (click)="updateQty(i.product.id, i.qty - 1)">-</button>
+                <input type="number"
+                       class="form-control text-center"
+                       [ngModel]="i.qty"
+                       (ngModelChange)="updateQty(i.product.id, $event)"
+                       min="1">
+                <button class="btn btn-outline-secondary" (click)="updateQty(i.product.id, i.qty + 1)">+</button>
+              </div>
+            </td>
+            <td class="text-end">S/ {{i.product.precio | number:'1.2-2'}}</td>
+            <td class="text-end">S/ {{(i.product.precio * i.qty) | number:'1.2-2'}}</td>
+            <td class="text-end">
+              <button class="btn btn-sm btn-outline-danger" (click)="remove(i.product.id)">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <button class="btn btn-outline-secondary" (click)="clear()">Vaciar carrito</button>
+        <div class="fs-4">
+          Total: <strong>S/ {{ total() | number:'1.2-2' }}</strong>
+        </div>
+      </div>
+
+      <div class="text-end mt-3">
+        <button class="btn btn-success btn-lg">
+          <i class="bi bi-credit-card"></i> Proceder al pago (demo)
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
